@@ -1,0 +1,894 @@
+{
+  "products": {
+    "chicken": {
+      "name": "куриная грудка",
+      "pattern": "грудк|курицей"
+    },
+    "thigh": {
+      "name": "филе куриного бедра",
+      "pattern": "бедр"
+    },
+    "mince": {
+      "name": "куриный фарш для котлет",
+      "pattern": "фарш|котлет"
+    },
+    "pork": {
+      "name": "нежирная свинина",
+      "pattern": "свинин"
+    },
+    "fish": {
+      "name": "красная рыба",
+      "pattern": "красн\\w* рыб"
+    },
+    "tuna": {
+      "name": "тунец",
+      "pattern": "тунец|тунцом"
+    },
+    "mackerel": {
+      "name": "скумбрия",
+      "pattern": "скумбри"
+    },
+    "herring": {
+      "name": "филе сельди",
+      "pattern": "сельд"
+    },
+    "liver": {
+      "name": "печень трески",
+      "pattern": "печен\\w* трески"
+    },
+    "crab": {
+      "name": "крабовые палочки",
+      "pattern": "крабов"
+    },
+    "salami": {
+      "name": "салями",
+      "pattern": "салями"
+    },
+    "sausage": {
+      "name": "варёная колбаса",
+      "pattern": "колбас"
+    },
+    "biolact": {
+      "name": "биолакт без сахара",
+      "pattern": "биолакт"
+    },
+    "tema": {
+      "name": "малиновый биойогурт «Тёма»",
+      "pattern": "малиновый биойогурт|«тема» малина"
+    },
+    "curdbar": {
+      "name": "глазированный сырок",
+      "pattern": "сырок|сырка"
+    },
+    "curdcup": {
+      "name": "творожок",
+      "pattern": "творожок"
+    },
+    "curd": {
+      "name": "творог",
+      "pattern": "творог(?!\\w)"
+    },
+    "yogurt": {
+      "name": "натуральный йогурт",
+      "pattern": "йогурт"
+    },
+    "milk": {
+      "name": "молоко",
+      "pattern": "молок"
+    },
+    "kefir": {
+      "name": "кефир",
+      "pattern": "кефир"
+    },
+    "cheese": {
+      "name": "сыр",
+      "pattern": "\\bсыр\\b|сыром"
+    },
+    "egg": {
+      "name": "яйцо",
+      "pattern": "яйц"
+    },
+    "cabbage": {
+      "name": "капуста",
+      "pattern": "капуст"
+    },
+    "carrot": {
+      "name": "морковь",
+      "pattern": "морков"
+    },
+    "cucumber": {
+      "name": "огурцы",
+      "pattern": "\\bогур"
+    },
+    "tomato": {
+      "name": "помидоры",
+      "pattern": "помидор"
+    },
+    "potato": {
+      "name": "картофель",
+      "pattern": "картофел|картошк"
+    },
+    "apple": {
+      "name": "яблоко",
+      "pattern": "яблок"
+    },
+    "banana": {
+      "name": "банан",
+      "pattern": "банан"
+    },
+    "onion": {
+      "name": "репчатый лук",
+      "pattern": "\\bлук"
+    },
+    "dill": {
+      "name": "укроп",
+      "pattern": "укроп"
+    },
+    "pasta": {
+      "name": "спиральки",
+      "pattern": "спиральк"
+    },
+    "buckwheat": {
+      "name": "гречка",
+      "pattern": "гречк"
+    },
+    "oats": {
+      "name": "овсяные хлопья",
+      "pattern": "овсян"
+    },
+    "flakes": {
+      "name": "хлопья",
+      "pattern": "хлопь"
+    },
+    "crispbread": {
+      "name": "хлебцы",
+      "pattern": "хлебц"
+    },
+    "bread": {
+      "name": "тостовый хлеб",
+      "pattern": "\\bхлеб\\b|тост|бутерброд"
+    },
+    "rice": {
+      "name": "рис",
+      "pattern": "\\bрис\\w*|онигири"
+    },
+    "nori": {
+      "name": "нори",
+      "pattern": "нори|онигири"
+    },
+    "corn": {
+      "name": "кукуруза",
+      "pattern": "кукуруз"
+    },
+    "oil": {
+      "name": "масло",
+      "pattern": "масл"
+    },
+    "mayo": {
+      "name": "майонез",
+      "pattern": "майонез"
+    },
+    "ketchup": {
+      "name": "кетчуп",
+      "pattern": "кетчуп"
+    },
+    "jam": {
+      "name": "варенье",
+      "pattern": "варень"
+    },
+    "nuts": {
+      "name": "орехи",
+      "pattern": "орех"
+    },
+    "coffee": {
+      "name": "кофе",
+      "pattern": "кофе"
+    },
+    "cookies": {
+      "name": "печенье",
+      "pattern": "печень[ея]"
+    },
+    "marmalade": {
+      "name": "мармелад",
+      "pattern": "мармелад"
+    },
+    "marshmallow": {
+      "name": "зефир",
+      "pattern": "зефир"
+    },
+    "mms": {
+      "name": "M&M’s",
+      "pattern": "m&m"
+    },
+    "milkyway": {
+      "name": "Milky Way",
+      "pattern": "milky"
+    },
+    "kinder": {
+      "name": "Kinder",
+      "pattern": "kinder"
+    },
+    "chips": {
+      "name": "мясные чипсы",
+      "pattern": "чипс"
+    },
+    "cake": {
+      "name": "пирожное",
+      "pattern": "пирожн"
+    },
+    "seasoning": {
+      "name": "соль и привычные специи",
+      "pattern": "соль|специ"
+    }
+  },
+  "dishes": {
+    "Хлопья с молоком, йогурт и банан": [
+      "banana",
+      "flakes",
+      "milk",
+      "yogurt"
+    ],
+    "Творожок, бутерброд с яйцом, яблоко": [
+      "apple",
+      "bread",
+      "curdcup",
+      "egg"
+    ],
+    "Грудка со спиральками": [
+      "cabbage",
+      "carrot",
+      "chicken",
+      "cucumber",
+      "ketchup",
+      "oil",
+      "pasta",
+      "seasoning",
+      "tomato"
+    ],
+    "«Тёма» Малина и яблоко": [
+      "apple",
+      "tema"
+    ],
+    "Натуральный йогурт, яблоко, kinder": [
+      "apple",
+      "kinder",
+      "yogurt"
+    ],
+    "Грудка с картошкой": [
+      "cabbage",
+      "carrot",
+      "chicken",
+      "cucumber",
+      "ketchup",
+      "oil",
+      "potato",
+      "seasoning",
+      "tomato"
+    ],
+    "Бутерброд с яйцом и сыром, яблоко": [
+      "apple",
+      "bread",
+      "cheese",
+      "egg"
+    ],
+    "Творожок и бутерброд с салями, майонезом и огурцом": [
+      "bread",
+      "cucumber",
+      "curdcup",
+      "mayo",
+      "salami"
+    ],
+    "Йогурт и печенье": [
+      "cookies",
+      "yogurt"
+    ],
+    "Кефир, банан, m&m’s": [
+      "banana",
+      "kefir",
+      "mms"
+    ],
+    "Салат с тунцом, яйцом, огурцом и кукурузой": [
+      "apple",
+      "cabbage",
+      "carrot",
+      "corn",
+      "cucumber",
+      "egg",
+      "mayo",
+      "tomato",
+      "tuna"
+    ],
+    "Салат с тунцом, яйцом, огурцом и кукурузой, яблоко": [
+      "apple",
+      "corn",
+      "cucumber",
+      "egg",
+      "mayo",
+      "tuna"
+    ],
+    "Творог с вареньем и бананом": [
+      "banana",
+      "curd",
+      "jam"
+    ],
+    "Творожок, бутерброд с яйцом и сыром, овощи": [
+      "bread",
+      "cabbage",
+      "carrot",
+      "cheese",
+      "cucumber",
+      "curdcup",
+      "egg",
+      "tomato"
+    ],
+    "Рис с яйцом, сыром и овощами": [
+      "cabbage",
+      "carrot",
+      "cheese",
+      "cucumber",
+      "egg",
+      "oil",
+      "rice",
+      "tomato"
+    ],
+    "Хлебцы с травами, сыр и яблоко": [
+      "apple",
+      "cheese",
+      "crispbread"
+    ],
+    "Творог, варенье, яблоко": [
+      "apple",
+      "curd",
+      "jam"
+    ],
+    "Котлеты со спиральками": [
+      "cabbage",
+      "carrot",
+      "cucumber",
+      "ketchup",
+      "mince",
+      "oats",
+      "onion",
+      "pasta",
+      "seasoning",
+      "tomato"
+    ],
+    "Йогурт с овсяными хлопьями и яблоком": [
+      "apple",
+      "oats",
+      "yogurt"
+    ],
+    "Творожок, творог, варенье, банан": [
+      "banana",
+      "curd",
+      "curdcup",
+      "jam"
+    ],
+    "Котлеты с картошкой": [
+      "cabbage",
+      "carrot",
+      "cucumber",
+      "ketchup",
+      "mince",
+      "oats",
+      "onion",
+      "potato",
+      "seasoning",
+      "tomato"
+    ],
+    "Йогурт и мармелад": [
+      "marmalade",
+      "yogurt"
+    ],
+    "Биолакт без сахара, банан, m&m’s": [
+      "banana",
+      "biolact",
+      "mms"
+    ],
+    "Бутерброд с сыром и помидором, йогурт": [
+      "bread",
+      "cabbage",
+      "carrot",
+      "cheese",
+      "cucumber",
+      "tomato",
+      "yogurt"
+    ],
+    "Творожок, бутерброд с яйцом, яблоко, овощи": [
+      "apple",
+      "bread",
+      "cabbage",
+      "carrot",
+      "cucumber",
+      "curdcup",
+      "egg",
+      "tomato"
+    ],
+    "Кефир и Kinder": [
+      "kefir",
+      "kinder"
+    ],
+    "Кефир, яблоко, печенье": [
+      "apple",
+      "cookies",
+      "kefir"
+    ],
+    "Бутерброды с тунцом и сыром": [
+      "bread",
+      "cabbage",
+      "carrot",
+      "cheese",
+      "cucumber",
+      "tomato",
+      "tuna"
+    ],
+    "Горячий бутерброд с колбасой и сыром, огурец": [
+      "bread",
+      "cabbage",
+      "carrot",
+      "cheese",
+      "cucumber",
+      "sausage",
+      "tomato"
+    ],
+    "Творожок и горячий бутерброд с колбасой и сыром, огурец": [
+      "bread",
+      "cheese",
+      "cucumber",
+      "curdcup",
+      "sausage"
+    ],
+    "Картофельный салат с яйцом и огурцом": [
+      "cabbage",
+      "carrot",
+      "cheese",
+      "cucumber",
+      "egg",
+      "mayo",
+      "potato",
+      "tomato"
+    ],
+    "Творожок и яблоко": [
+      "apple",
+      "curdcup"
+    ],
+    "Кефир, яблоко, глазированный сырок": [
+      "apple",
+      "curdbar",
+      "kefir"
+    ],
+    "Красная рыба с рисом": [
+      "cabbage",
+      "carrot",
+      "cucumber",
+      "dill",
+      "fish",
+      "rice",
+      "seasoning",
+      "tomato"
+    ],
+    "Горячий бутерброд с яйцом, сыром и помидором": [
+      "bread",
+      "cabbage",
+      "carrot",
+      "cheese",
+      "cucumber",
+      "egg",
+      "tomato"
+    ],
+    "Творожок и горячий бутерброд с яйцом, сыром и помидором": [
+      "bread",
+      "cheese",
+      "curdcup",
+      "egg",
+      "tomato"
+    ],
+    "Онигири с тунцом и огурец": [
+      "cabbage",
+      "carrot",
+      "cucumber",
+      "mayo",
+      "nori",
+      "rice",
+      "tomato",
+      "tuna"
+    ],
+    "«Тёма» Малина и печенье": [
+      "cookies",
+      "tema"
+    ],
+    "Натуральный йогурт, яблоко, хлебцы": [
+      "apple",
+      "crispbread",
+      "yogurt"
+    ],
+    "Свинина со спиральками": [
+      "cabbage",
+      "carrot",
+      "cucumber",
+      "ketchup",
+      "oil",
+      "pasta",
+      "pork",
+      "seasoning",
+      "tomato"
+    ],
+    "Кефир и сырок": [
+      "curdbar",
+      "kefir"
+    ],
+    "Кефир, банан, мясные чипсы": [
+      "banana",
+      "chips",
+      "kefir"
+    ],
+    "Свинина с картошкой": [
+      "cabbage",
+      "carrot",
+      "cucumber",
+      "oil",
+      "pork",
+      "potato",
+      "seasoning",
+      "tomato"
+    ],
+    "Хлебцы с травами, яйцо, сыр и огурец": [
+      "cabbage",
+      "carrot",
+      "cheese",
+      "crispbread",
+      "cucumber",
+      "egg",
+      "tomato"
+    ],
+    "Горячие бутерброды с яйцом и сыром": [
+      "bread",
+      "cabbage",
+      "carrot",
+      "cheese",
+      "cucumber",
+      "egg",
+      "tomato"
+    ],
+    "Бутерброды с колбасой и майонезом, яблоко": [
+      "apple",
+      "bread",
+      "mayo",
+      "sausage"
+    ],
+    "Творог с вареньем, яблоко": [
+      "apple",
+      "curd",
+      "jam"
+    ],
+    "Бедро с картошкой": [
+      "cabbage",
+      "carrot",
+      "cucumber",
+      "ketchup",
+      "oil",
+      "potato",
+      "seasoning",
+      "thigh",
+      "tomato"
+    ],
+    "Бедро со спиральками": [
+      "cabbage",
+      "carrot",
+      "cucumber",
+      "ketchup",
+      "pasta",
+      "seasoning",
+      "thigh",
+      "tomato"
+    ],
+    "Творожок, натуральный йогурт, банан, орехи": [
+      "banana",
+      "curdcup",
+      "nuts",
+      "yogurt"
+    ],
+    "Кефир и зефир": [
+      "kefir",
+      "marshmallow"
+    ],
+    "Натуральный йогурт, банан, milky way": [
+      "banana",
+      "milkyway",
+      "yogurt"
+    ],
+    "Тосты с сельдью, яйцом и огурцом": [
+      "bread",
+      "cabbage",
+      "carrot",
+      "cucumber",
+      "egg",
+      "herring",
+      "tomato"
+    ],
+    "Бутерброды с курицей и помидором": [
+      "bread",
+      "cabbage",
+      "carrot",
+      "chicken",
+      "cucumber",
+      "mayo",
+      "tomato"
+    ],
+    "Свинина с гречкой": [
+      "buckwheat",
+      "cabbage",
+      "carrot",
+      "cucumber",
+      "oil",
+      "pork",
+      "seasoning",
+      "tomato"
+    ],
+    "Салат со скумбрией, яйцом, огурцом и кукурузой": [
+      "apple",
+      "cabbage",
+      "carrot",
+      "corn",
+      "cucumber",
+      "egg",
+      "mackerel",
+      "mayo",
+      "tomato"
+    ],
+    "Картофельный салат с яйцом, огурцом и крабовыми палочками": [
+      "cabbage",
+      "carrot",
+      "crab",
+      "cucumber",
+      "egg",
+      "mayo",
+      "potato",
+      "tomato"
+    ],
+    "Тосты с печенью трески, яйцом и огурцом": [
+      "bread",
+      "cabbage",
+      "carrot",
+      "cucumber",
+      "egg",
+      "liver",
+      "tomato"
+    ],
+    "Хлопья с молоком, банан и яйцо": [
+      "banana",
+      "egg",
+      "flakes",
+      "milk"
+    ]
+  },
+  "itemKeys": {
+    "0-0-0": "pasta",
+    "0-0-1": "buckwheat",
+    "0-0-2": "flakes",
+    "0-0-3": "oats",
+    "0-0-4": "crispbread",
+    "0-1-0": "tuna",
+    "0-1-1": "corn",
+    "0-1-2": "liver",
+    "0-1-3": "rice",
+    "0-1-4": "potato",
+    "0-1-5": "nori",
+    "0-2-0": "oil",
+    "0-2-1": "mayo",
+    "0-2-2": "ketchup",
+    "0-2-3": "jam",
+    "0-2-4": "nuts",
+    "0-2-5": "coffee",
+    "0-3-0": "cookies",
+    "0-3-1": "marmalade",
+    "0-3-2": "marshmallow",
+    "0-3-3": "mms",
+    "0-3-4": "milkyway",
+    "0-3-5": "kinder",
+    "0-3-6": "chips",
+    "1-0-0": "chicken",
+    "1-0-1": "salami",
+    "1-1-0": "egg",
+    "1-1-1": "curdcup",
+    "1-1-2": "yogurt",
+    "1-1-3": "kefir",
+    "1-1-4": "milk",
+    "1-1-5": "curd",
+    "1-1-6": "cheese",
+    "1-1-7": "tema",
+    "1-2-0": "cabbage",
+    "1-2-1": "carrot",
+    "1-2-2": "cucumber",
+    "1-2-3": "tomato",
+    "1-2-4": "potato",
+    "1-2-5": "apple",
+    "1-2-6": "banana",
+    "1-3-0": "bread",
+    "1-4-0": "tuna",
+    "1-4-1": "corn",
+    "1-4-2": "rice",
+    "2-0-0": "mince",
+    "2-0-1": "sausage",
+    "2-0-2": "fish",
+    "2-1-0": "egg",
+    "2-1-1": "curdcup",
+    "2-1-2": "yogurt",
+    "2-1-3": "kefir",
+    "2-1-4": "milk",
+    "2-1-5": "curd",
+    "2-1-6": "cheese",
+    "2-1-7": "biolact",
+    "2-1-8": "curdbar",
+    "2-2-0": "cabbage",
+    "2-2-1": "carrot",
+    "2-2-2": "cucumber",
+    "2-2-3": "tomato",
+    "2-2-4": "potato",
+    "2-2-5": "apple",
+    "2-2-6": "banana",
+    "2-3-0": "bread",
+    "2-3-1": "cake",
+    "2-4-0": "tuna",
+    "2-4-1": "rice",
+    "2-4-2": "potato",
+    "3-0-0": "pork",
+    "3-0-1": "sausage",
+    "3-0-2": "salami",
+    "3-1-0": "egg",
+    "3-1-1": "curdcup",
+    "3-1-2": "yogurt",
+    "3-1-3": "kefir",
+    "3-1-4": "milk",
+    "3-1-5": "curd",
+    "3-1-6": "cheese",
+    "3-1-7": "tema",
+    "3-1-8": "curdbar",
+    "3-2-0": "cabbage",
+    "3-2-1": "carrot",
+    "3-2-2": "cucumber",
+    "3-2-3": "tomato",
+    "3-2-4": "potato",
+    "3-2-5": "apple",
+    "3-2-6": "banana",
+    "3-3-0": "bread",
+    "3-4-0": "tuna",
+    "3-4-1": "corn",
+    "3-4-2": "rice",
+    "3-4-3": "nori",
+    "4-0-0": "thigh",
+    "4-0-1": "sausage",
+    "4-0-2": "herring",
+    "4-1-0": "egg",
+    "4-1-1": "curdcup",
+    "4-1-2": "yogurt",
+    "4-1-3": "kefir",
+    "4-1-4": "milk",
+    "4-1-5": "cheese",
+    "4-1-6": "tema",
+    "4-1-7": "biolact",
+    "4-2-0": "cabbage",
+    "4-2-1": "carrot",
+    "4-2-2": "cucumber",
+    "4-2-3": "tomato",
+    "4-2-4": "potato",
+    "4-2-5": "apple",
+    "4-2-6": "banana",
+    "4-3-0": "bread",
+    "4-3-1": "cake",
+    "4-4-0": "tuna",
+    "4-4-1": "rice",
+    "4-4-2": "potato",
+    "5-0-0": "chicken",
+    "5-1-0": "egg",
+    "5-1-1": "curdcup",
+    "5-1-2": "yogurt",
+    "5-1-3": "kefir",
+    "5-1-4": "milk",
+    "5-1-5": "curd",
+    "5-1-6": "cheese",
+    "5-1-7": "tema",
+    "5-1-8": "curdbar",
+    "5-2-0": "cabbage",
+    "5-2-1": "carrot",
+    "5-2-2": "cucumber",
+    "5-2-3": "tomato",
+    "5-2-4": "potato",
+    "5-2-5": "apple",
+    "5-2-6": "banana",
+    "5-3-0": "bread",
+    "5-4-0": "rice",
+    "5-4-1": "potato",
+    "6-0-0": "pork",
+    "6-0-1": "sausage",
+    "6-0-2": "fish",
+    "6-0-3": "mackerel",
+    "6-1-0": "egg",
+    "6-1-1": "curdcup",
+    "6-1-2": "yogurt",
+    "6-1-3": "kefir",
+    "6-1-4": "milk",
+    "6-1-5": "curd",
+    "6-1-6": "cheese",
+    "6-1-7": "tema",
+    "6-1-8": "biolact",
+    "6-2-0": "cabbage",
+    "6-2-1": "carrot",
+    "6-2-2": "cucumber",
+    "6-2-3": "tomato",
+    "6-2-4": "potato",
+    "6-2-5": "apple",
+    "6-2-6": "banana",
+    "6-3-0": "bread",
+    "6-3-1": "cake",
+    "6-4-0": "tuna",
+    "6-4-1": "corn",
+    "6-4-2": "rice",
+    "7-0-0": "mince",
+    "7-1-0": "egg",
+    "7-1-1": "curdcup",
+    "7-1-2": "yogurt",
+    "7-1-3": "kefir",
+    "7-1-4": "milk",
+    "7-1-5": "curd",
+    "7-1-6": "cheese",
+    "7-1-7": "tema",
+    "7-1-8": "curdbar",
+    "7-2-0": "cabbage",
+    "7-2-1": "carrot",
+    "7-2-2": "cucumber",
+    "7-2-3": "tomato",
+    "7-2-4": "potato",
+    "7-2-5": "apple",
+    "7-2-6": "banana",
+    "7-3-0": "bread",
+    "7-4-0": "tuna",
+    "7-4-1": "rice",
+    "7-4-2": "nori",
+    "8-0-0": "thigh",
+    "8-0-1": "sausage",
+    "8-0-2": "salami",
+    "8-0-3": "crab",
+    "8-1-0": "egg",
+    "8-1-1": "curdcup",
+    "8-1-2": "yogurt",
+    "8-1-3": "kefir",
+    "8-1-4": "milk",
+    "8-1-5": "curd",
+    "8-1-6": "cheese",
+    "8-1-7": "tema",
+    "8-1-8": "biolact",
+    "8-2-0": "cabbage",
+    "8-2-1": "carrot",
+    "8-2-2": "cucumber",
+    "8-2-3": "tomato",
+    "8-2-4": "potato",
+    "8-2-5": "apple",
+    "8-2-6": "banana",
+    "8-3-0": "bread",
+    "8-3-1": "cake",
+    "8-4-0": "tuna",
+    "8-4-1": "corn",
+    "8-4-2": "rice",
+    "8-4-3": "potato",
+    "8-4-4": "liver",
+    "9-0-0": "chicken",
+    "9-1-0": "egg",
+    "9-1-1": "curdcup",
+    "9-1-2": "yogurt",
+    "9-1-3": "kefir",
+    "9-1-4": "milk",
+    "9-1-5": "cheese",
+    "9-1-6": "curdbar",
+    "9-2-0": "cabbage",
+    "9-2-1": "carrot",
+    "9-2-2": "cucumber",
+    "9-2-3": "tomato",
+    "9-2-4": "potato",
+    "9-2-5": "apple",
+    "9-2-6": "banana",
+    "9-3-0": "bread",
+    "9-4-0": "tuna",
+    "9-4-1": "corn"
+  }
+}

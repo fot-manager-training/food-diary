@@ -28,7 +28,7 @@ with sync_playwright() as p:
         for removed in REMOVED:
             assert removed not in text, (tab, removed)
     groups = page.locator('.shopping-group')
-    expect(groups).to_have_count(4)
+    expect(groups).to_have_count(5)
     expect(groups.first.locator('.fold-count')).to_have_text('0 / 5')
     groups.first.locator('.group-heading').click()
     expect(groups.first.locator('[data-item]').first).not_to_be_visible()
@@ -39,19 +39,19 @@ with sync_playwright() as p:
     expect(groups.first.locator('[data-item]').first).to_be_visible()
     groups.first.locator('[data-item]').first.check()
     expect(groups.first.locator('.fold-count')).to_have_text('1 / 5')
-    expect(page.locator('.checklist-heading .fold-count')).to_have_text('1 / 24')
+    expect(page.locator('.checklist-heading .fold-count')).to_have_text('1 / 27')
     page.locator('[data-fold-all=close]').click()
     assert page.locator('.shopping-group[open]').count() == 0
     page.reload()
     assert page.locator('.shopping-group[open]').count() == 0
-    expect(page.locator('.checklist-heading .fold-count')).to_have_text('1 / 24')
+    expect(page.locator('.checklist-heading .fold-count')).to_have_text('1 / 27')
     page.locator('[data-fold-all=open]').click()
-    assert page.locator('.shopping-group[open]').count() == 4
+    assert page.locator('.shopping-group[open]').count() == 5
     expect(page.locator('#undo')).to_be_disabled()  # Reload cleared history, not the checkmarks.
     page.locator('#reset').click()
-    expect(page.locator('.checklist-heading .fold-count')).to_have_text('0 / 24')
+    expect(page.locator('.checklist-heading .fold-count')).to_have_text('0 / 27')
     page.locator('#undo').click()
-    expect(page.locator('.checklist-heading .fold-count')).to_have_text('1 / 24')
+    expect(page.locator('.checklist-heading .fold-count')).to_have_text('1 / 27')
     page.locator('.checklist-heading').click()
     expect(page.locator('.fold-tools')).not_to_be_visible()
     page.reload()
@@ -59,7 +59,7 @@ with sync_playwright() as p:
     page.locator('.checklist-heading').click()
     expect(page.locator('.fold-tools')).to_be_visible()
     page.locator('[data-view=dishes]').click()
-    assert page.locator('[data-item]').count() == 24
+    assert page.locator('[data-item]').evaluate_all('(els)=>new Set(els.map(el=>el.dataset.item)).size') == 27
     assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
     page.emulate_media(reduced_motion='reduce')
     page.locator('[data-tab=menu]').click()
