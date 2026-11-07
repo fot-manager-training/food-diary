@@ -1,0 +1,18 @@
+{
+  "name": "За одним столом · Катя и Лиза",
+  "short_name": "За столом",
+  "lang": "ru",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f6ee",
+  "theme_color": "#c1b9fa",
+  "icons": [
+    {
+      "src": "assets/app-icon.png",
+      "sizes": "1254x1254",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

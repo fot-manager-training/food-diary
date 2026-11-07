@@ -8,6 +8,7 @@ from playwright.sync_api import sync_playwright, expect
 with sync_playwright() as p:
     browser = p.chromium.launch(headless=True, executable_path=os.environ.get('CHROMIUM_PATH', '/usr/bin/chromium'), args=['--no-sandbox'])
     page = browser.new_page(viewport={'width': 1280, 'height': 900})
+    page.add_init_script("localStorage.setItem('table-selectedDate', JSON.stringify('2026-11-01'))")
     errors = []
     page.on('pageerror', lambda error: errors.append(str(error)))
     page.goto(sys.argv[1] if len(sys.argv) > 1 else 'http://127.0.0.1:8000')
