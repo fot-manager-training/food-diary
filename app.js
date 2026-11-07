@@ -3,7 +3,7 @@ const $=s=>document.querySelector(s);
 const safe=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const get=(key,fallback)=>{try{return JSON.parse(localStorage.getItem('table-'+key))??fallback}catch{return fallback}};
 const put=(key,val)=>{try{localStorage.setItem('table-'+key,JSON.stringify(val))}catch{toast('Браузер не разрешил сохранение. Изменения доступны до закрытия страницы.')}};
-let data,user=get('user',null),day=get('day',1),start=get('start',''),checked=get('checked',{}),tripId=get('trip',0),view='document',filter='today',query='',history=[],calendarOpen=false;
+let data,user=get('user',null),day=get('day',1),start=get('start','2026-11-09'),checked=get('checked',{}),tripId=get('trip',0),view='document',filter='today',query='',history=[],calendarOpen=false;
 if(!['katya','liza'].includes(user))user=null;
 if(!Number.isInteger(day)||day<1||day>30)day=1;
 const names={katya:'Катя',liza:'Лиза'},mealNames=['Завтрак','Обед','Перекус','Ужин'],icons=['☕','🍲','🍎','🥗'];
