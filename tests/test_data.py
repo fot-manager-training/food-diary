@@ -13,6 +13,27 @@ class MenuDataTest(unittest.TestCase):
             for meal in day['meals']:
                 self.assertTrue(meal['katya'])
                 self.assertTrue(meal['liza'])
+                self.assertTrue(meal['lizaPortion'])
+
+    def test_nutrition_belongs_to_liza(self):
+        self.assertEqual(DATA['nutritionProfile'], 'liza')
+        self.assertEqual(DATA['days'][0]['kcal'], 1499)
+        self.assertEqual(DATA['days'][0]['macros'], [104, 33, 196])
+        self.assertEqual(DATA['days'][29]['macros'], [96, 46, 176])
+        breakfast = DATA['days'][0]['meals'][0]
+        self.assertIn('хлопья 35 г', breakfast['lizaPortion'])
+        self.assertEqual(breakfast['katya'], 'Творожок, бутерброд с яйцом, яблоко')
+        self.assertIn('десерт мармелад 15 г', DATA['days'][0]['meals'][3]['lizaPortion'])
+        self.assertIn('скумбрия 85 г', DATA['days'][18]['meals'][3]['lizaPortion'])
+        self.assertIn('кофе с 50 мл молока', ' '.join(DATA['guidance']).lower())
+
+    def test_updated_shopping_quantities(self):
+        pantry = [i['text'] for g in DATA['trips'][0]['groups'] for i in g['items']]
+        self.assertIn('спиральки 1,2 кг', pantry)
+        self.assertIn('тунец 1705 г без заливки', pantry)
+        self.assertIn('печенье 325 г', pantry)
+        last = [i['text'] for g in DATA['trips'][9]['groups'] for i in g['items']]
+        self.assertIn('сырой картофель 875 г', last)
 
     def test_source_specific_differences(self):
         self.assertIn('сельдью', DATA['days'][11]['meals'][3]['liza'])
