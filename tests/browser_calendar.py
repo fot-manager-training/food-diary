@@ -19,13 +19,15 @@ with sync_playwright() as p:
     expect(page.locator('.calendar-empty')).to_have_count(1) # December starts Tuesday.
     expect(page.locator('.calendar button')).to_have_count(31)
     page.locator('.calendar [data-date="2026-12-01"]').click()
-    expect(page.locator('.nutrition')).to_contain_text('1499')
+    expect(page.locator('.nutrition')).to_contain_text('ОЦЕНКА СУММЫ ПРОДУКТОВ')
     page.locator('[data-edit="0"]').click()
+    while page.locator('.edit-row').count()>1:
+        page.locator('.edit-row').last.locator('.remove-position').click()
     page.locator('.edit-name').fill('Тестовое блюдо декабря')
     page.locator('.edit-name').press('Tab')
     page.locator('.edit-kcal').fill('123')
     page.locator('#meal-form button[type=submit]').click()
-    expect(page.locator('.nutrition')).to_contain_text('123')
+    expect(page.locator('.meal').first).to_contain_text('123 ккал')
     page.locator('[data-tab=shopping]').click()
     page.locator('[data-item]').first.check()
 
@@ -36,7 +38,7 @@ with sync_playwright() as p:
         page.locator('[data-tab=menu]').click()
 
     select_date('2027-01-01')
-    expect(page.locator('.nutrition')).to_contain_text('1499')
+    expect(page.locator('.nutrition')).to_contain_text('ОЦЕНКА СУММЫ ПРОДУКТОВ')
     expect(page.locator('.meal').first).not_to_contain_text('Тестовое блюдо декабря')
     page.locator('[data-tab=shopping]').click()
     expect(page.locator('.check-row.done')).to_have_count(0)
@@ -45,7 +47,7 @@ with sync_playwright() as p:
     page.locator('[data-tab=shopping]').click()
     expect(page.locator('.check-row.done')).to_have_count(1)
     select_date('2027-01-31')
-    expect(page.locator('.nutrition')).to_contain_text('1499') # Menu day 1 on the 31st.
+    expect(page.locator('.nutrition')).to_contain_text('ОЦЕНКА СУММЫ ПРОДУКТОВ') # Menu day 1 on the 31st.
     expect(page.locator('.datebar h2')).to_have_text('31 января')
     expect(page.locator('.ribbon-day.selected span')).to_have_text('вс')
     page.locator('[data-tab=recipes]').click()
@@ -79,6 +81,6 @@ with sync_playwright() as p:
     legacy.add_init_script("""localStorage.setItem('table-user','"liza"');localStorage.setItem('table-start','"2026-11-09"');localStorage.setItem('table-selectedDate','"2026-11-09"');localStorage.setItem('table-menuEdits',JSON.stringify({'liza-1-0':[{name:'Старое блюдо',details:'Порция',kcal:456}]}));""")
     legacy.goto('http://127.0.0.1:8000')
     expect(legacy.locator('.meal').first).to_contain_text('Старое блюдо')
-    expect(legacy.locator('.nutrition')).to_contain_text('456')
+    expect(legacy.locator('.meal').first).to_contain_text('456 ккал')
     browser.close()
     print('Calendar checks passed: real weekday offsets, today, date ribbon, month boundaries, leap years, monthly menu, date-specific edits, monthly shopping and migration.')

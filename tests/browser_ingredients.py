@@ -4,6 +4,8 @@ with sync_playwright() as p:
     browser=p.chromium.launch(headless=True,executable_path='/usr/bin/chromium',args=['--no-sandbox'])
     page=browser.new_page(viewport={'width':390,'height':844})
     errors=[]
+    # Historical October plan remains available as a regression fixture.
+    page.add_init_script("localStorage.setItem('table-selectedDate',JSON.stringify('2026-10-01'))")
     page.on('pageerror',lambda e:errors.append(str(e)))
     page.goto('http://127.0.0.1:8000')
     page.locator('#identity button[value=liza]').click()

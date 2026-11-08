@@ -5,10 +5,11 @@ const norm=s=>s.toLowerCase().replaceAll('ё','е');
 const unique=items=>[...new Map(items.filter(i=>i.checkable!==false).map(i=>[i.id,i])).values()];
 function includesMeal(trips,trip,d,i){if(trip.id===0)return true;const next=trips[trip.id+1];const start=(trip.day||1)*4+(trip.id%2===0?3:0),end=next?(next.day*4+(next.id%2===0?3:0)):31*4;return d*4+i>=start&&d*4+i<end;}
 function build(data,model,options={}){
+ if(data.componentPlanning)return (typeof module!=='undefined'&&module.exports?require('./menu-plans.js'):root.MealPlans).buildShopping(data,model,options);
  const milkPack=Number(options.milkPack)||1000;
  const stocks={milk:Math.max(0,Number(options.milkStock)||0),egg:0};
  const trips=data.trips.map(t=>({...t,groups:t.groups.map(g=>({...g,items:g.items.map(item=>{
-  const key=model.itemKeys[item.id],copy={...item,key,sourceId:item.id,checkable:true};
+  const key=model.itemKeys[item.id],copy={...item,key,sourceId:item.id,checkable:true};if(key==='rice'){copy.text=t.id===0?'Рис сухой — 1 упаковка 1 кг':'Рис сухой — из месячного запаса';copy.detail='Ориентир закупки; сначала проверьте остаток'}if(key==='potato'&&/готовый/.test(copy.text)){copy.text=t.id===0?'Картофель сырой — ориентир 1,5 кг':'Картофель сырой — из запаса';copy.detail='Ориентир с учётом очистки; точный выход зависит от приготовления'}if(key==='fish'&&/запеч/.test(copy.text))copy.text='Филе красной рыбы сырое или замороженное — ориентир 300 г';
   if(key==='milk'||key==='egg'){
    const required=Number(item.text.match(/(\d+)\s*(?:мл|шт\.)/)[1]),pack=key==='milk'?milkPack:10;
    const before=stocks[key],packs=Math.max(0,Math.ceil((required-before)/pack));stocks[key]+=packs*pack-required;
